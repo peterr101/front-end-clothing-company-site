@@ -1,0 +1,27 @@
+footer i {
+  color: #b9b985;
+  padding-right: 1rem;
+}
+
+footer i:hover {
+  color: rgb(30, 39, 36);
+}
+
+footer {
+  background: #252b2b;
+  padding-top: 1rem;
+}
+
+footer div.area {
+  min-height: 18vh;
+}
+
+footer p {
+  color: rgb(245, 249, 252);
+}
+
+footer p.copyright {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}

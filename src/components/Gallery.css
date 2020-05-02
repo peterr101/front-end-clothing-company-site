@@ -1,0 +1,45 @@
+#gallery {
+  background: url("../images/D-CHOICE-6.jpg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-position: top right;
+  background-attachment: fixed;
+  height: 45vh;
+  position: relative;
+}
+
+#gallery::after {
+  content: "";
+  width: 100%;
+  background: black;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+}
+
+#gallery button {
+  z-index: 1;
+  padding: 12px;
+  border-radius: 0;
+  border-width: medium;
+  font-weight: bold;
+  transition: background-position 0.3s linear;
+  background: linear-gradient(to right, white 50%, #ffffff00 50%);
+  background-position: right bottom;
+  background-size: 200% 100%;
+}
+
+#gallery button:hover {
+  background-position: left bottom;
+}
+
+@media (max-width: 992px) {
+  #gallery {
+    background-position: center;
+    background-attachment: scroll;
+    height: 35vh;
+  }
+}

@@ -1,0 +1,28 @@
+#largeNav .navbar {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+#largeNav a.nav-link {
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
+#largeNav .navbar-brand {
+  font-family: "Rubik Mono One", Geneva, sans-serif;
+  font-weight: 700;
+}
+
+.navbar img {
+  object-fit: cover;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  nav#largeNav {
+    display: none;
+  }
+}

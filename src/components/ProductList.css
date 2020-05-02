@@ -1,0 +1,70 @@
+img.item {
+  width: 95%;
+  height: 55vh;
+  object-fit: cover;
+  margin-bottom: 2.5rem;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  border: 0.25rem double #b8af9e;
+}
+
+#bootstrap-overrides h2.collection-name {
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+  line-height: 1.75rem;
+  border-bottom: 0.02px solid black;
+  text-shadow: 0.1rem 0.1rem 0.6rem rgb(0, 0, 0);
+}
+
+#bootstrap-overrides .jumbotron.beige {
+  background: linear-gradient(to top, #efeee9, #efeee9);
+  border-radius: 0;
+  padding-top: 3.7rem;
+  position: relative;
+}
+
+#bootstrap-overrides .jumbotron.beige::after {
+  content: "";
+  width: 100%;
+  background: linear-gradient(to top, #7a5309, #efeee9);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+.border-name-left {
+  border-left: 0.25rem solid rgb(102, 102, 102);
+  line-height: 1rem;
+}
+
+.vertical {
+  font-family: "Yesteryear", Helvetica, cursive;
+  position: absolute;
+  color: #fcf9f9ef;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  z-index: 2;
+  bottom: 3.5%;
+  font-size: 2rem;
+}
+
+.vertical span.dirty {
+  font-family: "Rock Salt", Geneva, sans-serif;
+  font-size: 1.4rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .vertical {
+    font-size: 1.4rem;
+    bottom: 6%;
+  }
+  .vertical span.dirty {
+    font-size: 1rem;
+  }
+}

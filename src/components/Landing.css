@@ -1,0 +1,150 @@
+#initialImage {
+  position: relative;
+  height: 100vh;
+  background-image: url("../images/harleys.jpg");
+  background-size: cover;
+}
+#initialImage button {
+  outline: none;
+  border: none;
+}
+/* nav-bar icon */
+.navbar-dark .navbar-toggler span {
+  display: block;
+  width: 3rem;
+  height: 2px;
+  margin: 6px auto;
+  margin-left: -1rem;
+  background: #fff;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.navbar-dark .navbar-toggler:hover span {
+  background: #f8f8c1;
+}
+/* rotate first span */
+.navbar-dark .navbar-toggler[aria-expanded="true"] span:nth-child(1) {
+  width: 1.8rem;
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.navbar-dark .navbar-toggler[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+/* rotate third span */
+.navbar-dark .navbar-toggler[aria-expanded="true"] span:nth-child(3) {
+  width: 1.8rem;
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+a.nav-link:hover,
+a.nav-link.active {
+  color: #f3f383 !important;
+}
+
+#sidebar a:hover {
+  background-color: rgb(143, 182, 65);
+  background-color: #d3d382;
+  opacity: 0.7;
+  color: black !important;
+  text-shadow: none;
+}
+
+#initialImage .greeting {
+  position: absolute;
+  /* top: 32%;
+  left: 15%; */
+  top: 50%;
+  left: 49%;
+}
+
+#sidebar {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+#sidebar a {
+  font-family: "Courier New";
+  color: #f1f1ad;
+  letter-spacing: 0.3em;
+  font-weight: 900;
+  font-size: 16px;
+  text-shadow: 0.1rem 0.1rem 0.5rem rgb(5, 5, 0);
+}
+
+div.greeting h1 {
+  animation: fade 3s;
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+}
+
+div.greeting h1.first {
+  font-family: "Yesteryear", Helvetica, cursive;
+  color: #fff2f4;
+  float: left;
+  font-size: 67px;
+}
+
+#bootstrap-overrides h1.second {
+  position: relative;
+  top: 5px;
+  float: right;
+  font-size: 70px;
+  font-family: "Rock Salt", Geneva, sans-serif;
+  color: #fff2f4;
+}
+
+#bootstrap-overrides .bg-dark {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  div.greeting h1.first {
+    float: none;
+    display: block;
+    font-size: 4rem;
+    text-shadow: 0.1rem 0.1rem 0.3rem rgb(196, 196, 178);
+  }
+  #initialImage .greeting {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+  }
+  #bootstrap-overrides h1.second {
+    float: none;
+    display: block;
+    position: relative;
+    margin-left: 6rem;
+    font-size: 4rem;
+    text-shadow: 0.1rem 0.1rem 0.5rem rgb(235, 235, 220);
+  }
+}
