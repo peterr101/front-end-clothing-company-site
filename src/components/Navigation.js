@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Navigation extends Component {
   render() {
@@ -16,6 +17,9 @@ class Navigation extends Component {
         <a className="nav-link" href="#">
           Contact
         </a>
+        <Link className="nav-link" to="/terms-and-conditions">
+          Terms &amp; Conditions
+        </Link>
       </div>
     );
   }

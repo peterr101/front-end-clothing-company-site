@@ -1,0 +1,35 @@
+.navbar-dark .navbar-toggler span {
+  display: block;
+  width: 3rem;
+  height: 2px;
+  margin: 6px auto;
+  margin-left: -1rem;
+  background: #fff;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.navbar button {
+  outline: none;
+  border: none;
+}
+.navbar-dark .navbar-toggler:hover span {
+  background: #f8f8c1;
+}
+/* rotate first span */
+.navbar-dark .navbar-toggler[aria-expanded="true"] span:nth-child(1) {
+  width: 1.8rem;
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.navbar-dark .navbar-toggler[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+/* rotate third span */
+.navbar-dark .navbar-toggler[aria-expanded="true"] span:nth-child(3) {
+  width: 1.8rem;
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+a.nav-link:hover,
+a.nav-link.active {
+  color: #f3f383 !important;
+}

@@ -1,21 +1,18 @@
 import React, { Component } from "react";
 import SlideShow from "./SlideShow";
 import "./Gallery.css";
+import { DisplayContext } from "../Context/DisplayContext";
 
 class Gallery extends Component {
+  static contextType = DisplayContext;
   constructor(props) {
     super(props);
     this.state = { slidesVisible: false };
   }
 
   toggleSlideVisibility = () => {
-    const largeNav = document.getElementById("largeNav");
-    if (largeNav.style.display === "none") {
-      largeNav.style.display = "flex";
-    } else {
-      largeNav.style.display = "none";
-    }
-    console.log(largeNav.style.display);
+    const dcontext = this.context;
+    dcontext.hideNav();
     this.setState({ slidesVisible: !this.state.slidesVisible });
   };
 
