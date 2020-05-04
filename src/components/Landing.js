@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import { DisplayContext } from "../Context/DisplayContext";
 import "./Landing.css";
 import ScrollAnimation from "./ScrollAnimation";
 import Navigation from "./Navigation";
-import { Link } from "react-router-dom";
-import SmallScreenNav from "./SmallScreenNav";
 
 class Landing extends Component {
   componentDidMount() {
@@ -26,12 +23,6 @@ class Landing extends Component {
     return (
       <div className="container-fluid">
         <div id="proper-dirty">
-          {/* <DisplayContext.Consumer>
-            {(context) =>
-              context.state.isNavVisibile ? ( */}
-
-          <SmallScreenNav />
-          {/* ) : null }</DisplayContext.Consumer> */}
           <Navigation />
           <div id="titles" className="clearfix greeting"></div>
           <ScrollAnimation />
