@@ -2,14 +2,12 @@ import React from "react";
 import LargeNav from "./LargeNav";
 import Footer from "./Footer";
 import "./TermsAndConditions.css";
-import SmallScreenNav from "./SmallScreenNav";
 
 function TermsAndConditions() {
   return (
     <React.Fragment>
       <LargeNav />
-      <SmallScreenNav />
-      <div className="jumbotron wrapper m-0">
+      <div className="jumbotron m-0">
         <h1 className="text-center text-capitalize text-space pt-4">
           Terms <span className="amp">&amp;</span> Conditions
         </h1>
