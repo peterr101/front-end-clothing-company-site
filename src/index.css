@@ -9,8 +9,22 @@ body {
   position: relative;
   height: 100%;
 }
-html {
-  height: 100%;
+
+.offset-nav {
+  padding-top: 5rem;
+}
+.full-height {
+  height: 100vh;
+}
+
+#bootstrap-overrides .page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#bootstrap-overrides .footer-offset {
+  /* equals the footer height */
+  padding-bottom: 9rem;
 }
 
 #bootstrap-overrides .container-fluid {

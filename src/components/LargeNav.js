@@ -70,6 +70,14 @@ class LargeNav extends Component {
               </a>
             </li>
             <li className="nav-item">
+              <Link
+                className="nav-link text-white font-weight-bold"
+                to="/shop-all"
+              >
+                Shop All
+              </Link>
+            </li>
+            <li className="nav-item">
               <a
                 className="nav-link text-white font-weight-bold"
                 href="/#about"
@@ -78,9 +86,12 @@ class LargeNav extends Component {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white font-weight-bold" href="/#">
+              <Link
+                className="nav-link text-white font-weight-bold"
+                to="/contact"
+              >
                 Contact
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <Link

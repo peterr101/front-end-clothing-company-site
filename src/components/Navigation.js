@@ -11,12 +11,15 @@ class Navigation extends Component {
         <a className="nav-link" href="#emotions">
           Shop Emotions
         </a>
+        <Link className="nav-link" to="/shop-all">
+          Shop All
+        </Link>
         <a className="nav-link" href="#about">
           A Message from the Creator
         </a>
-        <a className="nav-link" href="#">
+        <Link className="nav-link" to="/contact">
           Contact
-        </a>
+        </Link>
         <Link className="nav-link" to="/terms-and-conditions">
           Terms &amp; Conditions
         </Link>

@@ -4,6 +4,8 @@ import Footer from "./Footer";
 import "./TermsAndConditions.css";
 
 function TermsAndConditions() {
+  window.scrollTo(0, 0);
+  console.log("Shifted!");
   return (
     <React.Fragment>
       <LargeNav />

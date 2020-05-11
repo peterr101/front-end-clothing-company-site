@@ -1,0 +1,11 @@
+.anchor {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#contact .contact-info {
+  font-size: 1.2rem;
+  margin-left: 0.3rem;
+  vertical-align: bottom;
+}
