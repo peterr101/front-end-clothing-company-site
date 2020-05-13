@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import LargeNav from "./LargeNav";
 import "./Contact.css";
 import MessageForm from "./MessageForm";
+import { TimelineMax } from "gsap";
 
 class Contact extends Component {
   constructor(props) {
@@ -16,6 +17,12 @@ class Contact extends Component {
   componentDidMount() {
     this.handleResize();
     window.scrollTo(0, 0);
+    const timeline = new TimelineMax();
+    const phone = document.getElementById("phone");
+    const mail = document.getElementById("mail");
+    timeline
+      .fromTo(phone, 1.5, { x: -40 }, { x: 0 })
+      .fromTo(mail, 1.5, { x: 40 }, { x: 0 }, "-=1.5");
     window.addEventListener("resize", this.handleResize);
   }
 
@@ -56,15 +63,15 @@ class Contact extends Component {
             <div className="col-md-6 border-right h-100">
               <div className="d-flex flex-column align-items-center h-100 justify-content-center">
                 <h2 className="font-weight-bold pb-4">Contact</h2>
-                <div className="d-flex flex-wrap justify-content-around w-75">
-                  <div>
+                <div className="d-flex flex-wrap">
+                  <div id="phone" className="pr-4">
                     <i
                       className="fa fa-phone-square pt-1"
                       aria-hidden="true"
                     ></i>
-                    <span className="contact-info"> (778)389-6267</span>
+                    <span className="contact-info">(778)389-6267</span>
                   </div>
-                  <div>
+                  <div id="mail">
                     <i className="fa fa-envelope" aria-hidden="true"></i>
                     <span className="contact-info"> shop@properdirty.com</span>
                   </div>

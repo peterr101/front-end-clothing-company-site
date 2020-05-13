@@ -7,6 +7,7 @@ img.item {
   overflow: hidden;
   position: relative;
   border: 0.25rem double #b8af9e;
+  cursor: pointer;
 }
 
 #bootstrap-overrides h2.collection-name {
@@ -51,6 +52,7 @@ img.item {
   z-index: 2;
   bottom: 3.5%;
   font-size: 2rem;
+  cursor: default;
 }
 
 .vertical span.dirty {

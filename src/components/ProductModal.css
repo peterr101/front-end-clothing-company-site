@@ -1,0 +1,43 @@
+.modal-content {
+  border-radius: 0;
+  width: 80vw;
+  background-color: rgb(230, 230, 230);
+}
+.modal-body {
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.close-icon {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2rem;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.close-icon:hover {
+  color: black;
+  background-color: bisque;
+}
+
+.top-line {
+  background-color: rgba(172, 167, 167, 0.781);
+}
+
+.product-name {
+  font-family: "Playfair Display SC", serif;
+  font-size: 1.5rem;
+}
+
+.main-image {
+  height: 90vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.price {
+  font-size: 1.3rem;
+}
