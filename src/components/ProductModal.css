@@ -32,10 +32,46 @@
   font-size: 1.5rem;
 }
 
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul .smaller-font {
+  font-size: 0.7rem;
+  color: black;
+}
+
+.MuiSvgIcon-fontSizeSmall {
+  padding-right: 6px;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+.width-70 {
+  width: 70%;
+}
+
 .main-image {
   height: 90vh;
   width: 100%;
   object-fit: cover;
+}
+
+.selectable-image {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  background-position: center center;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 100%;
+}
+
+/* only for modal selectable images */
+.selected-border {
+  border: 4px double black;
 }
 
 .price {

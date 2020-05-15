@@ -7,7 +7,7 @@ class ProductList extends Component {
     super(props);
     this.state = {
       isModalOpen: false,
-      currentItem: {},
+      currentItem: { images: [], description: [] },
     };
     this.openProductWindow = this.openProductWindow.bind(this);
   }
@@ -42,9 +42,9 @@ class ProductList extends Component {
                     </p>
                     <div className="d-flex justify-content-end">
                       <img
-                        className="item position-relative"
+                        className="item"
                         alt="Err"
-                        src={item.image}
+                        src={item.images[0]}
                         key={item.id}
                         onClick={() => {
                           this.openProductWindow(item);
@@ -68,6 +68,7 @@ class ProductList extends Component {
           show={this.state.isModalOpen}
           onHide={() => this.setState({ isModalOpen: !this.state.isModalOpen })}
           item={this.state.currentItem}
+          key={this.state.currentItem.id}
         />
       </>
     );

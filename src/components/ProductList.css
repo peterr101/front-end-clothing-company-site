@@ -51,6 +51,7 @@ img.item {
   -webkit-transform: rotate(-180deg);
   z-index: 2;
   bottom: 3.5%;
+  right: 3.3%;
   font-size: 2rem;
   cursor: default;
 }

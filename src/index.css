@@ -17,6 +17,11 @@ body {
   height: 100vh;
 }
 
+/* .row:before,
+.row:after {
+  display: flex !important;
+} */
+
 #bootstrap-overrides .page-container {
   position: relative;
   min-height: 100vh;
