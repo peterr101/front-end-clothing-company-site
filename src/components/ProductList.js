@@ -29,10 +29,10 @@ class ProductList extends Component {
           <div className="row">
             {this.props.products.map((item, i) => {
               return (
-                <div className="col-6 col-md-4" key={item.id}>
+                <div className="col-6 col-md-4 small-screen-fix" key={item.id}>
                   <div className="d-flex justify-content-between">
                     <p
-                      className="align-self-start mt-4 pl-2 pt-1 pb-1 text-lowercase border-name-left"
+                      className="align-self-start mt-3 mt-md-4 pl-1 pl-m-2 pt-1 pb-1 text-lowercase border-name-left"
                       key={item.id}
                     >
                       {item.name}

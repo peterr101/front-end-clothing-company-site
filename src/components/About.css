@@ -29,3 +29,11 @@
 div#about.jumbotron {
   padding: 4rem 2rem 2rem;
 }
+
+@media (max-width: 576px) {
+  #about .img-fluid.d-inline-block {
+    height: 200px;
+    width: 30%;
+    margin: 0.5rem 0.5rem 0rem;
+  }
+}

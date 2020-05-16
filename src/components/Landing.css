@@ -93,16 +93,21 @@ div.greeting h1.first {
 
 /* Media Queries */
 @media (max-width: 768px) {
+  #proper-dirty {
+    background-position: 10% top;
+  }
+
   div.greeting h1.first {
     float: none;
     display: block;
     font-size: 4rem;
-    text-shadow: 0.1rem 0.1rem 0.3rem rgb(196, 196, 178);
+    text-shadow: 0.1rem 0.1rem 0.5rem rgb(196, 196, 178);
   }
   #proper-dirty .greeting {
     position: absolute;
-    top: 25%;
-    left: 20%;
+    top: 24%;
+    left: 10%;
+    overflow-x: clip;
   }
   #bootstrap-overrides h1.second {
     float: none;

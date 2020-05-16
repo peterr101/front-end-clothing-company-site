@@ -10,7 +10,7 @@ export const VintageWetDreamsProductList = [
     images: [tee2, tee3, tee4, tee, tee2],
     description: [
       "made with 100% real material",
-      "this is the finest silk in all of the land. You will never find something similar.made with 100% real material made with 100% real material made with 100% real material made with 100% real materialreal material made with 100% real material made with 100% real material made with 100%real material made with 100% real material made with 100% real material made with 100%",
+      "this is the finest silk in all of the land. You will never find something similar.made with 100% real material made with 100% real material made with 100% real material made with 100% real, material made with 100% real material made with 100% real material made with 100%",
       "loresjvhibib",
     ],
     id: 1,

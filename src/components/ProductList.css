@@ -37,8 +37,9 @@ img.item {
 }
 
 .border-name-left {
-  border-left: 0.25rem solid rgb(102, 102, 102);
+  border-left: 0.2rem solid rgb(102, 102, 102);
   line-height: 1rem;
+  font-size: 0.8rem;
 }
 
 .vertical {
@@ -52,22 +53,38 @@ img.item {
   z-index: 2;
   bottom: 3.5%;
   right: 3.3%;
-  font-size: 2rem;
+  font-size: 1.9rem;
   cursor: default;
 }
 
 .vertical span.dirty {
   font-family: "Rock Salt", Geneva, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
   .vertical {
-    font-size: 1.4rem;
-    bottom: 6%;
+    font-size: 1.2rem;
+    bottom: 8%;
+    right: 6%;
   }
   .vertical span.dirty {
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .border-name-left {
+    border-left: 0.15rem solid rgb(102, 102, 102);
+    line-height: 0.7rem;
+    font-size: 0.6rem;
+  }
+  img.item {
+    height: 40vh;
+    width: 96%;
+  }
+
+  #bootstrap-overrides .small-screen-fix {
+    padding-left: 9px;
+    padding-right: 9px;
   }
 }

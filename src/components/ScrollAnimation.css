@@ -55,10 +55,29 @@
 @media (max-width: 768px) {
   .box span {
     display: block;
-    width: 7vw;
-    height: 7vw;
+    width: 9vw;
+    height: 9vw;
     transform: rotate(45deg);
-    margin: -5px;
+    margin: -6px;
     animation: animate 2s infinite;
+  }
+  @keyframes animate {
+    0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-4vh, -4vh);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(4vh, 4vh);
+    }
+  }
+
+  .box {
+    top: 55%;
+    left: 47%;
+    transform: translate(47%, 55%);
   }
 }
