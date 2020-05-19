@@ -16,6 +16,12 @@ class ProductList extends Component {
     this.setState({ isModalOpen: !this.state.isModalOpen, currentItem: item });
   }
 
+  handleHover(event, item) {
+    if (item.images.length > 1) {
+      event.target.src = item.images[1];
+    }
+  }
+
   render() {
     return (
       <>
@@ -49,6 +55,8 @@ class ProductList extends Component {
                         onClick={() => {
                           this.openProductWindow(item);
                         }}
+                        onMouseEnter={(e) => this.handleHover(e, item)}
+                        onMouseLeave={(e) => (e.target.src = item.images[0])}
                       />
                       <div
                         className="vertical"

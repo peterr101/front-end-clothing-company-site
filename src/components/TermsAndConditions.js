@@ -15,7 +15,6 @@ class TermsAndConditions extends Component {
       .fromTo(underline, 1.5, { y: 50 }, { y: 0 }, "-=1.5");
   }
   render() {
-    console.log("Shifted!");
     return (
       <React.Fragment>
         <LargeNav />

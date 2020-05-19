@@ -94,7 +94,7 @@ div.greeting h1.first {
 /* Media Queries */
 @media (max-width: 768px) {
   #proper-dirty {
-    background-position: 10% top;
+    background-position: 15% top;
   }
 
   div.greeting h1.first {

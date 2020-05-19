@@ -14,6 +14,7 @@ export const VintageWetDreamsProductList = [
       "loresjvhibib",
     ],
     id: 1,
+    sizes: ["xsmall", "small", "medium", "large"],
   },
   {
     name: "Cheetah Tee",
@@ -21,6 +22,7 @@ export const VintageWetDreamsProductList = [
     images: [tee2, tee3],
     description: ["ethlknvlksvgasjv alvbsdgsdglasvbasvlasjvbaslva"],
     id: 2,
+    sizes: ["small", "medium", "large"],
   },
   {
     name: "Longer Relative Tee",
@@ -35,6 +37,7 @@ export const VintageWetDreamsProductList = [
     images: [tee2],
     description: ["ethlknvlksvgasjv alvbsdgsdglasvbasvlasjvbaslva"],
     id: 4,
+    sizes: ["small"],
   },
   {
     name: "Cheetah Tee",

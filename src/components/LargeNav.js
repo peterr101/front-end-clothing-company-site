@@ -30,7 +30,7 @@ class LargeNav extends Component {
     return (
       <nav
         id="largeNav"
-        className={`navbar bg-dark navbar-dark navbar-expand-lg ${this.state.pos}`}
+        className={`navbar bg-dark navbar-dark navbar-expand-xl ${this.state.pos}`}
       >
         <a className="navbar-brand" href="/#proper-dirty">
           <img alt="PD" src={logo} className="rounded align-top"></img>

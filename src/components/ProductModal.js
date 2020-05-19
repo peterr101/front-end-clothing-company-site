@@ -4,6 +4,14 @@ import { TimelineMax, Power1 } from "gsap";
 import "./ProductModal.css";
 import ProductScrollAnimation from "./ProductScrollAnimation";
 import AcUnitIcon from "@material-ui/icons/AcUnit";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormControl from "@material-ui/core/FormControl";
+import FormLabel from "@material-ui/core/FormLabel";
+import Typography from "@material-ui/core/Typography";
+import { ThemeProvider } from "@material-ui/core/styles";
+import { sizeSelectTheme, titleSizeSelectTheme } from "./MuiThemeCreator";
 
 class ProductModal extends Component {
   constructor(props) {
@@ -12,10 +20,12 @@ class ProductModal extends Component {
       // initial default image
       selectedImage: this.props.item.images[0],
       prevSelectedElementIndex: 0,
+      selectedSize: "small",
     };
     this.timeline = new TimelineMax();
     this.updateSelectedImage = this.updateSelectedImage.bind(this);
     this.selectableImages = document.getElementsByClassName("selectable-image");
+    this.handleSizeChange = this.handleSizeChange.bind(this);
   }
 
   updateSelectedImage(index, image) {
@@ -26,8 +36,12 @@ class ProductModal extends Component {
     this.setState({ selectedImage: image, prevSelectedElementIndex: index });
   }
 
+  handleSizeChange(event) {
+    this.setState({ selectedSize: event.target.value });
+  }
+
   render() {
-    const maxSelectableImages = 4;
+    const maxSelectableImages = 5;
     return (
       <Modal
         {...this.props}
@@ -67,6 +81,38 @@ class ProductModal extends Component {
                     ${this.props.item.price}
                   </div>
                 </div>
+                {this.props.item.hasOwnProperty("sizes") ? (
+                  <div className="ml-auto pl-2 mr-2">
+                    <FormControl component="fieldset" focused={false}>
+                      <ThemeProvider theme={titleSizeSelectTheme}>
+                        <Typography>
+                          <FormLabel component="legend">Size:</FormLabel>
+                        </Typography>
+                      </ThemeProvider>
+                      <RadioGroup
+                        aria-label="size"
+                        name="size"
+                        row
+                        value={this.state.selectedSize}
+                        onChange={this.handleSizeChange}
+                      >
+                        <ThemeProvider theme={sizeSelectTheme}>
+                          <Typography variant="body1">
+                            {this.props.item.sizes.map((size) => (
+                              <FormControlLabel
+                                value={size}
+                                key={size}
+                                control={<Radio color="default" />}
+                                label={size}
+                                labelPlacement="start"
+                              />
+                            ))}
+                          </Typography>
+                        </ThemeProvider>
+                      </RadioGroup>
+                    </FormControl>
+                  </div>
+                ) : null}
                 <button
                   type="button"
                   className="btn btn-dark align-self-center btn-lg mt-3 mb-3 w-75"
@@ -98,7 +144,7 @@ class ProductModal extends Component {
                     }
                   })}
                 </div>
-                <div className="d-none d-lg-block align-self-center w-75 position-relative pt-5">
+                <div className="d-none d-lg-block align-self-center w-75 position-relative pt-4">
                   <ProductScrollAnimation />
                 </div>
               </div>
