@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Modal } from "react-bootstrap";
-import { TimelineMax, Power1 } from "gsap";
+import { TimelineMax, Power1 } from "gsap/all";
 import "./ProductModal.css";
 import ProductScrollAnimation from "./ProductScrollAnimation";
 import AcUnitIcon from "@material-ui/icons/AcUnit";

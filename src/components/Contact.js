@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import LargeNav from "./LargeNav";
 import "./Contact.css";
 import MessageForm from "./MessageForm";
-import { TimelineMax } from "gsap";
+import { TimelineMax } from "gsap/all";
 
 class Contact extends Component {
   constructor(props) {

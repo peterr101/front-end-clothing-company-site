@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import LargeNav from "./LargeNav";
 import Footer from "./Footer";
 import "./TermsAndConditions.css";
-import { TimelineMax } from "gsap";
+import { TimelineMax, CSSPlugin } from "gsap/all";
 
 class TermsAndConditions extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
+    // Ensure required plugins don't get dropped by tree-shaking
+    const plugins = [CSSPlugin];
     const timeline = new TimelineMax();
     const header = document.getElementById("terms-header");
     const underline = document.getElementsByClassName("heading-underline");
@@ -41,6 +43,12 @@ class TermsAndConditions extends Component {
               original condition. Tags must not be broken. We can't refund your
               purchase or return shipping costs unless the product is faulty or
               incorrect.
+            </p>
+            <hr className="my-5" />
+            <h4 className="font-weight-bold">Shipping</h4>
+            <p className="pl-2">
+              We can't refund your purchase or return shipping costs unless the
+              product is faulty or incorrect.
             </p>
           </div>
         </div>
