@@ -8,6 +8,7 @@ class TermsAndConditions extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
     // Ensure required plugins don't get dropped by tree-shaking
+    // eslint-disable-next-line
     const plugins = [CSSPlugin];
     const timeline = new TimelineMax();
     const header = document.getElementById("terms-header");
