@@ -133,7 +133,9 @@ class ProductModal extends Component {
                       return (
                         <img
                           className={`selectable-image ${
-                            index === 0 ? "selected-border" : ""
+                            index === this.state.prevSelectedElementIndex
+                              ? "selected-border"
+                              : ""
                           }`}
                           alt="Error Loading"
                           src={image}

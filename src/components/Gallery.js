@@ -8,6 +8,12 @@ class Gallery extends Component {
   constructor(props) {
     super(props);
     this.state = { slidesVisible: false };
+    const userAgentString = navigator.userAgent;
+    const chromeAgent = userAgentString.indexOf("Chrome") > -1;
+    this.safariAgent = userAgentString.indexOf("Safari") > -1;
+
+    // Discard Safari since it also matches Chrome
+    if (chromeAgent && this.safariAgent) this.safariAgent = false;
   }
 
   toggleSlideVisibility = () => {
@@ -20,7 +26,9 @@ class Gallery extends Component {
     return (
       <div
         id="gallery"
-        className="container-fluid d-flex justify-content-center"
+        className={`container-fluid d-flex justify-content-center ${
+          this.safariAgent ? "safari-override" : ""
+        }`}
       >
         <button
           type="button"

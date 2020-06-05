@@ -1,8 +1,8 @@
 import React from "react";
-import photoOne from "../images/D-CHOICE-2.jpg";
-import photoTwo from "../images/D-CHOICE-6.jpg";
-import photoThree from "../images/D-CHOICE-15.jpg";
-import photoFour from "../images/D-CHOICE-19.jpg";
+import photoOne from "../images/D-CHOICE-2-resized.jpg";
+import photoTwo from "../images/D-CHOICE-6-resized.jpg";
+import photoThree from "../images/D-CHOICE-15-resized.jpg";
+import photoFour from "../images/D-CHOICE-19-resized.jpg";
 import "./About.css";
 
 function About() {
@@ -12,7 +12,6 @@ function About() {
         <div className="d-none d-md-flex col-md-5">
           <img alt="Err" src={photoOne} className="img-fluid modifier"></img>
         </div>
-
         <div className="col-md-7 justify-content-center">
           <h1>A Message from the Creator</h1>
           <p>

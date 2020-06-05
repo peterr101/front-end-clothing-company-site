@@ -3,10 +3,14 @@ import LargeNav from "./LargeNav";
 import Footer from "./Footer";
 import "./TermsAndConditions.css";
 import { TimelineMax, CSSPlugin } from "gsap/all";
+import { DisplayContext } from "../Context/DisplayContext";
 
 class TermsAndConditions extends Component {
+  static contextType = DisplayContext;
   componentDidMount() {
     window.scrollTo(0, 0);
+    const navContext = this.context;
+    navContext.setNavTermsLinkActiveness("active");
     // Ensure required plugins don't get dropped by tree-shaking
     // eslint-disable-next-line
     const plugins = [CSSPlugin];
@@ -17,9 +21,16 @@ class TermsAndConditions extends Component {
       .fromTo(header, 1.5, { y: -50 }, { y: 0 })
       .fromTo(underline, 1.5, { y: 50 }, { y: 0 }, "-=1.5");
   }
+
+  componentWillUnmount() {
+    const navContext = this.context;
+    navContext.setNavTermsLinkActiveness("");
+  }
+
   render() {
     return (
-      <React.Fragment>
+      // div here for scroll spy to function
+      <div id="terms">
         <LargeNav />
         <div className="jumbotron m-0">
           <h1
@@ -54,7 +65,7 @@ class TermsAndConditions extends Component {
           </div>
         </div>
         <Footer />
-      </React.Fragment>
+      </div>
     );
   }
 }

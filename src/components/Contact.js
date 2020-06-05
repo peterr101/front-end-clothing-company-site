@@ -4,8 +4,10 @@ import LargeNav from "./LargeNav";
 import "./Contact.css";
 import MessageForm from "./MessageForm";
 import { TimelineMax } from "gsap/all";
+import { DisplayContext } from "../Context/DisplayContext";
 
 class Contact extends Component {
+  static contextType = DisplayContext;
   constructor(props) {
     super(props);
     this.state = {
@@ -17,6 +19,8 @@ class Contact extends Component {
   componentDidMount() {
     this.handleResize();
     window.scrollTo(0, 0);
+    const navContext = this.context;
+    navContext.setNavContactLinkActiveness("active");
     const timeline = new TimelineMax();
     const phone = document.getElementById("phone");
     const mail = document.getElementById("mail");
@@ -27,17 +31,20 @@ class Contact extends Component {
   }
 
   componentWillUnmount() {
+    const navContext = this.context;
+    navContext.setNavContactLinkActiveness("");
     window.removeEventListener("resize", this.handleResize);
   }
 
   handleResize() {
     this.setState({
-      ismobile: window.innerWidth < 768,
+      ismobile: window.innerWidth < 917,
     });
   }
   render() {
     return this.state.ismobile ? (
-      <>
+      // div here to get scroll spy to function
+      <div id="contact">
         <LargeNav />
         <div className="container d-flex flex-column align-items-center offset-nav pb-5">
           <h2 className="font-weight-bold pb-2">Contact</h2>
@@ -54,9 +61,10 @@ class Contact extends Component {
           <MessageForm InputProps={{ style: { fontSize: "2rem" } }} />
         </div>
         <Footer />
-      </>
+      </div>
     ) : (
-      <>
+      // div here to get scroll spy to function
+      <div id="contact">
         <LargeNav />
         <div className="container-fluid full-height">
           <div className="row no-gutters align-content-center h-100">
@@ -85,7 +93,7 @@ class Contact extends Component {
           </div>
           <Footer />
         </div>
-      </>
+      </div>
     );
   }
 }

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import logo from "../images/logo.png";
 import { Link } from "react-router-dom";
+import { DisplayContext } from "../Context/DisplayContext";
 
 class LargeNav extends Component {
+  static contextType = DisplayContext;
   constructor(props) {
     super(props);
     this.state = {
@@ -27,6 +29,7 @@ class LargeNav extends Component {
   }
 
   render() {
+    const navContext = this.context;
     return (
       <nav
         id="largeNav"
@@ -57,6 +60,7 @@ class LargeNav extends Component {
               <a
                 className="nav-link text-white font-weight-bold"
                 href="/#vintageWetDreams"
+                data-target="#vintageWetDreams"
               >
                 Vintage Wet Dreams
               </a>
@@ -65,6 +69,7 @@ class LargeNav extends Component {
               <a
                 className="nav-link text-white font-weight-bold"
                 href="/#emotions"
+                data-target="#emotions"
               >
                 Emotions
               </a>
@@ -73,6 +78,7 @@ class LargeNav extends Component {
               <Link
                 className="nav-link text-white font-weight-bold"
                 to="/shop-all"
+                data-target="#shop-all"
               >
                 Shop All
               </Link>
@@ -81,22 +87,25 @@ class LargeNav extends Component {
               <a
                 className="nav-link text-white font-weight-bold"
                 href="/#about"
+                data-target="#about"
               >
                 About
               </a>
             </li>
             <li className="nav-item">
               <Link
-                className="nav-link text-white font-weight-bold"
+                className={`nav-link text-white font-weight-bold ${navContext.state.navContactLinkActiveness}`}
                 to="/contact"
+                data-target="#contact"
               >
                 Contact
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                className="nav-link text-white font-weight-bold"
+                className={`nav-link text-white font-weight-bold ${navContext.state.navTermsLinkActiveness}`}
                 to="/terms-and-conditions"
+                data-target="#terms"
               >
                 Terms &amp; Conditions
               </Link>

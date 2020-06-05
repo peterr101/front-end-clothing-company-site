@@ -39,3 +39,16 @@
 .modalView .closer:hover {
   color: bisque;
 }
+
+@media (max-width: 768px) {
+  #vintageSlideShow img {
+    width: auto;
+    height: 400px;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  .modalView .closer {
+    font-size: 1.2rem;
+    bottom: 5%;
+  }
+}

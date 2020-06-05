@@ -1,12 +1,15 @@
 #gallery {
-  background: url("../images/D-CHOICE-6.jpg");
+  background-image: url("../images/gallery-background.jpg");
   background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-position: top right;
   background-attachment: fixed;
   height: 45vh;
   position: relative;
+}
+
+#gallery.safari-override {
+  background-position: center 15%;
+  background-attachment: scroll;
 }
 
 #gallery::after {

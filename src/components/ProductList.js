@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import ProgressiveImage from "react-progressive-graceful-image";
 import "./ProductList.css";
 import ProductModal from "./ProductModal";
+import placeholder from "../images/placeholder.jpg";
 
 class ProductList extends Component {
   constructor(props) {
@@ -35,36 +37,56 @@ class ProductList extends Component {
           <div className="row">
             {this.props.products.map((item, i) => {
               return (
-                <div className="col-6 col-md-4 small-screen-fix" key={item.id}>
-                  <div className="d-flex justify-content-between">
-                    <p
-                      className="align-self-start mt-3 mt-md-4 pl-1 pl-m-2 pt-1 pb-1 text-lowercase border-name-left"
-                      key={item.id}
+                <div
+                  className="col-6 col-md-4 small-screen-fix d-flex justify-content-between"
+                  key={item.id}
+                >
+                  <p
+                    className="align-self-start mt-3 mt-md-4 pl-1 pl-m-2 pt-1 pb-1 text-lowercase border-name-left product-name-container"
+                    key={item.id}
+                  >
+                    {item.name}
+                    <br />
+                    <br />
+                    {item.price}$
+                  </p>
+                  <div className="d-flex justify-content-end flex-shrink-1">
+                    <ProgressiveImage
+                      src={item.images[0]}
+                      placeholder=""
+                      rootMargin="0% 0% 0%"
+                      threshold={[0.5]}
                     >
-                      {item.name}
-                      <br />
-                      <br />
-                      {item.price}$
-                    </p>
-                    <div className="d-flex justify-content-end">
-                      <img
-                        className="item"
-                        alt="Err"
-                        src={item.images[0]}
-                        key={item.id}
-                        onClick={() => {
-                          this.openProductWindow(item);
-                        }}
-                        onMouseEnter={(e) => this.handleHover(e, item)}
-                        onMouseLeave={(e) => (e.target.src = item.images[0])}
-                      />
-                      <div
-                        className="vertical"
-                        style={{ display: i % 3 === 0 ? "" : "none" }}
-                      >
-                        <span>Proper </span>
-                        <span className="dirty">Dirty</span>
-                      </div>
+                      {(src, loading) =>
+                        loading ? (
+                          <img
+                            alt="Err"
+                            src={placeholder}
+                            className="loading"
+                          ></img>
+                        ) : (
+                          <img
+                            className="item"
+                            alt="Err"
+                            src={src}
+                            key={item.id}
+                            onClick={() => {
+                              this.openProductWindow(item);
+                            }}
+                            onMouseEnter={(e) => this.handleHover(e, item)}
+                            onMouseLeave={(e) =>
+                              (e.target.src = item.images[0])
+                            }
+                          />
+                        )
+                      }
+                    </ProgressiveImage>
+                    <div
+                      className="vertical"
+                      style={{ display: i % 3 === 0 ? "" : "none" }}
+                    >
+                      <span>Proper </span>
+                      <span className="dirty">Dirty</span>
                     </div>
                   </div>
                 </div>

@@ -44,9 +44,9 @@ function SlideShow(props) {
           </div>
         </div>
       </div>
-      <span className="closer" onClick={props.toggle}>
+      <div className="closer" onClick={props.toggle}>
         close
-      </span>
+      </div>
     </div>
   );
 }

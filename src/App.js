@@ -9,6 +9,7 @@ import { EmotionsProductList } from "./Products/AllCollections";
 import Footer from "./components/Footer";
 import LargeNav from "./components/LargeNav";
 import GlobalErrorBoundary from "./components/GlobalErrorBoundary";
+import { ContextProvider } from "./Context/DisplayContext";
 class App extends React.Component {
   render() {
     return (
@@ -16,29 +17,33 @@ class App extends React.Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route
-              path="/terms-and-conditions"
-              component={TermsAndConditions}
-            />
-            <Route path="/contact" component={Contact} />
-            <Route
-              exact
-              path="/shop-all"
-              render={() => (
-                <>
-                  {window.scrollTo(0, 0)}
-                  <LargeNav />
-                  <ProductList
-                    name="Shop All Collections"
-                    products={[
-                      ...VintageWetDreamsProductList,
-                      ...EmotionsProductList,
-                    ]}
-                  />
-                  <Footer />
-                </>
-              )}
-            />
+            <ContextProvider>
+              <Route
+                path="/terms-and-conditions"
+                component={TermsAndConditions}
+              />
+              <Route path="/contact" component={Contact} />
+              <Route
+                exact
+                path="/shop-all"
+                render={() => (
+                  <>
+                    {window.scrollTo(0, 0)}
+                    <span id="shop-all">
+                      <LargeNav />
+                      <ProductList
+                        name="Shop All Collections"
+                        products={[
+                          ...VintageWetDreamsProductList,
+                          ...EmotionsProductList,
+                        ]}
+                      />
+                      <Footer />
+                    </span>
+                  </>
+                )}
+              />
+            </ContextProvider>
           </Switch>
         </BrowserRouter>
       </GlobalErrorBoundary>
