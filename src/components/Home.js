@@ -17,7 +17,7 @@ function Home() {
         <NavBarFull />
         <About />
         <ProductList
-          name="Vintage Wet Dreams"
+          name="Collection One"
           id="vintageWetDreams"
           products={VintageWetDreamsProductList}
         >

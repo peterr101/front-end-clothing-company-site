@@ -50,11 +50,11 @@ class Contact extends Component {
           <h2 className="font-weight-bold pb-2">Contact</h2>
           <div>
             <i className="fa fa-phone-square pt-1" aria-hidden="true"></i>
-            <span className="contact-info"> (778)389-6267</span>
+            <span className="contact-info"> (778)999-9999</span>
           </div>
           <div>
             <i className="fa fa-envelope" aria-hidden="true"></i>
-            <span className="contact-info"> shop@properdirty.com</span>
+            <span className="contact-info"> shop@pcontact.com</span>
           </div>
         </div>
         <div className="col-12 pb-5">
@@ -77,11 +77,11 @@ class Contact extends Component {
                       className="fa fa-phone-square pt-1"
                       aria-hidden="true"
                     ></i>
-                    <span className="contact-info">(778)389-6267</span>
+                    <span className="contact-info">(778)999-9999</span>
                   </div>
                   <div id="mail">
                     <i className="fa fa-envelope" aria-hidden="true"></i>
-                    <span className="contact-info"> shop@properdirty.com</span>
+                    <span className="contact-info"> shop@contact.com</span>
                   </div>
                 </div>
               </div>

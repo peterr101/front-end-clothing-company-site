@@ -6,7 +6,7 @@ class Navigation extends Component {
     return (
       <div id="sidebar" className="d-none d-md-flex flex-column">
         <a className="nav-link" href="#vintageWetDreams">
-          Shop Vintage Wet Dreams
+          Shop Collection One
         </a>
         <a className="nav-link" href="#emotions">
           Shop Emotions

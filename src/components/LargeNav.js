@@ -62,7 +62,7 @@ class LargeNav extends Component {
                 href="/#vintageWetDreams"
                 data-target="#vintageWetDreams"
               >
-                Vintage Wet Dreams
+                Collection One
               </a>
             </li>
             <li className="nav-item">
