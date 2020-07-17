@@ -3,7 +3,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 export const sizeSelectTheme = createMuiTheme({
   typography: {
     body1: {
-      fontSize: "0.9rem",
+      fontSize: "0.8rem",
       "@media (max-width:768px)": {
         fontSize: "1rem",
       },
@@ -21,5 +21,6 @@ export const titleSizeSelectTheme = createMuiTheme({
     fontFamily: ["Courier New", "-apple-system", "Roboto", "sans-serif"].join(
       ","
     ),
+    fontSize: 12,
   },
 });

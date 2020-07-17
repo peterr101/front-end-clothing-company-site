@@ -75,7 +75,7 @@ class ProductModal extends Component {
                 />
               </div>
               <div className="col-md-4 d-flex flex-column p-0 justify-content-start">
-                <div className="d-flex flex-column mt-4 mr-3 mb-3 pl-2 align-self-end">
+                <div className="d-flex flex-column mt-2 mr-3 mb-2 pl-2 align-self-end">
                   <div className="product-name">{this.props.item.name}</div>
                   <div className="align-self-end price">
                     ${this.props.item.price}
@@ -115,7 +115,7 @@ class ProductModal extends Component {
                 ) : null}
                 <button
                   type="button"
-                  className="btn btn-dark align-self-center btn-lg mt-3 mb-3 w-75"
+                  className="btn btn-dark align-self-center btn-lg mt-2 mb-3 w-75"
                 >
                   Buy Now
                 </button>

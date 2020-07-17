@@ -29,7 +29,6 @@ class TermsAndConditions extends Component {
 
   render() {
     return (
-      // div here for scroll spy to function
       <div id="terms">
         <LargeNav />
         <div className="jumbotron m-0">
