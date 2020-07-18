@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b654a37c3d5e25d84139a3cd9b20fd0e",
+    "revision": "30b095a7602768565bed8aa325ab8ea9",
     "url": "/front-end-clothing-company-site/index.html"
   },
   {
-    "revision": "2aeee8a1f69c1e93e28d",
+    "revision": "b9d8b8777623780e20c4",
     "url": "/front-end-clothing-company-site/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "48ba27dad61e598d6f4a",
+    "revision": "6bc2ceb73755fd6c0d29",
     "url": "/front-end-clothing-company-site/static/css/main.08016461.chunk.css"
   },
   {
-    "revision": "2aeee8a1f69c1e93e28d",
-    "url": "/front-end-clothing-company-site/static/js/2.337efa97.chunk.js"
+    "revision": "b9d8b8777623780e20c4",
+    "url": "/front-end-clothing-company-site/static/js/2.a3a757b4.chunk.js"
   },
   {
     "revision": "d20ac35e665b22e2150f751ae27eac10",
-    "url": "/front-end-clothing-company-site/static/js/2.337efa97.chunk.js.LICENSE.txt"
+    "url": "/front-end-clothing-company-site/static/js/2.a3a757b4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "48ba27dad61e598d6f4a",
-    "url": "/front-end-clothing-company-site/static/js/main.3340c410.chunk.js"
+    "revision": "6bc2ceb73755fd6c0d29",
+    "url": "/front-end-clothing-company-site/static/js/main.742cffc8.chunk.js"
   },
   {
     "revision": "0f171385cc5451088cf0",

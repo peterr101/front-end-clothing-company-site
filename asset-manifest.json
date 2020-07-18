@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/front-end-clothing-company-site/static/css/main.08016461.chunk.css",
-    "main.js": "/front-end-clothing-company-site/static/js/main.3340c410.chunk.js",
-    "main.js.map": "/front-end-clothing-company-site/static/js/main.3340c410.chunk.js.map",
+    "main.js": "/front-end-clothing-company-site/static/js/main.742cffc8.chunk.js",
+    "main.js.map": "/front-end-clothing-company-site/static/js/main.742cffc8.chunk.js.map",
     "runtime-main.js": "/front-end-clothing-company-site/static/js/runtime-main.d8c5f4d1.js",
     "runtime-main.js.map": "/front-end-clothing-company-site/static/js/runtime-main.d8c5f4d1.js.map",
     "static/css/2.af3c1da9.chunk.css": "/front-end-clothing-company-site/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.337efa97.chunk.js": "/front-end-clothing-company-site/static/js/2.337efa97.chunk.js",
-    "static/js/2.337efa97.chunk.js.map": "/front-end-clothing-company-site/static/js/2.337efa97.chunk.js.map",
+    "static/js/2.a3a757b4.chunk.js": "/front-end-clothing-company-site/static/js/2.a3a757b4.chunk.js",
+    "static/js/2.a3a757b4.chunk.js.map": "/front-end-clothing-company-site/static/js/2.a3a757b4.chunk.js.map",
     "index.html": "/front-end-clothing-company-site/index.html",
-    "precache-manifest.4a35e940c200490107548ad8f7369490.js": "/front-end-clothing-company-site/precache-manifest.4a35e940c200490107548ad8f7369490.js",
+    "precache-manifest.18eecefab4a1da236e1921091c0fee3c.js": "/front-end-clothing-company-site/precache-manifest.18eecefab4a1da236e1921091c0fee3c.js",
     "service-worker.js": "/front-end-clothing-company-site/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/front-end-clothing-company-site/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.08016461.chunk.css.map": "/front-end-clothing-company-site/static/css/main.08016461.chunk.css.map",
-    "static/js/2.337efa97.chunk.js.LICENSE.txt": "/front-end-clothing-company-site/static/js/2.337efa97.chunk.js.LICENSE.txt",
+    "static/js/2.a3a757b4.chunk.js.LICENSE.txt": "/front-end-clothing-company-site/static/js/2.a3a757b4.chunk.js.LICENSE.txt",
     "static/media/D-CHOICE-15-resized.jpg": "/front-end-clothing-company-site/static/media/D-CHOICE-15-resized.30ca1180.jpg",
     "static/media/D-CHOICE-15.jpg": "/front-end-clothing-company-site/static/media/D-CHOICE-15.e7dc7ea6.jpg",
     "static/media/D-CHOICE-19-resized.jpg": "/front-end-clothing-company-site/static/media/D-CHOICE-19-resized.fcb6f69c.jpg",
@@ -33,8 +33,8 @@
   "entrypoints": [
     "static/js/runtime-main.d8c5f4d1.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.337efa97.chunk.js",
+    "static/js/2.a3a757b4.chunk.js",
     "static/css/main.08016461.chunk.css",
-    "static/js/main.3340c410.chunk.js"
+    "static/js/main.742cffc8.chunk.js"
   ]
 }
