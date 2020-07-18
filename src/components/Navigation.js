@@ -1,22 +1,25 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 class Navigation extends Component {
   render() {
     return (
       <div id="sidebar" className="d-none d-md-flex flex-column">
-        <a className="nav-link" href="#vintageWetDreams">
+        <Link
+          className="nav-link"
+          to={{ pathname: "/", hash: "#vintageWetDreams" }}
+        >
           Shop Collection One
-        </a>
-        <a className="nav-link" href="#emotions">
+        </Link>
+        <Link className="nav-link" to={{ pathname: "/", hash: "#emotions" }}>
           Shop Emotions
-        </a>
+        </Link>
         <Link className="nav-link" to="/shop-all">
           Shop All
         </Link>
-        <a className="nav-link" href="#about">
+        <Link className="nav-link" to={{ pathname: "/", hash: "#about" }}>
           A Message from the Creator
-        </a>
+        </Link>
         <Link className="nav-link" to="/contact">
           Contact
         </Link>

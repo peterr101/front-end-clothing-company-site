@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./components/Home";
 import TermsAndConditions from "./components/TermsAndConditions";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import Contact from "./components/Contact";
 import ProductList from "./components/ProductList";
 import { VintageWetDreamsProductList } from "./Products/AllCollections";
@@ -14,7 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <GlobalErrorBoundary>
-        <BrowserRouter>
+        <HashRouter basename="/">
           <Switch>
             <Route exact path="/" component={Home} />
             <ContextProvider>
@@ -45,7 +45,7 @@ class App extends React.Component {
               />
             </ContextProvider>
           </Switch>
-        </BrowserRouter>
+        </HashRouter>
       </GlobalErrorBoundary>
     );
   }
