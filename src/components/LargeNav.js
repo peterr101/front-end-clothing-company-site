@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import logo from "../images/logo.png";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import { DisplayContext } from "../Context/DisplayContext";
 
 class LargeNav extends Component {
@@ -35,10 +35,13 @@ class LargeNav extends Component {
         id="largeNav"
         className={`navbar bg-dark navbar-dark navbar-expand-xl ${this.state.pos}`}
       >
-        <a className="navbar-brand" href="/#proper-dirty">
+        <Link
+          className="navbar-brand"
+          to={{ pathname: "/", hash: "#proper-dirty" }}
+        >
           <img alt="PD" src={logo} className="rounded align-top"></img>
           Proper Dirty
-        </a>
+        </Link>
 
         {/* collapsable nav */}
         <button
@@ -57,22 +60,22 @@ class LargeNav extends Component {
         <div className="collapse navbar-collapse" id="navbarToggleContent">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link text-white font-weight-bold"
-                href="/#vintageWetDreams"
+                to={{ pathname: "/", hash: "#vintageWetDreams" }}
                 data-target="#vintageWetDreams"
               >
                 Collection One
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link text-white font-weight-bold"
-                href="/#emotions"
+                to={{ pathname: "/", hash: "#emotions" }}
                 data-target="#emotions"
               >
                 Emotions
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <Link
@@ -84,13 +87,13 @@ class LargeNav extends Component {
               </Link>
             </li>
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link text-white font-weight-bold"
-                href="/#about"
+                to={{ pathname: "/", hash: "#about" }}
                 data-target="#about"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <Link
